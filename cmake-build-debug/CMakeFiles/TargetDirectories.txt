@@ -1,3 +1,3 @@
-C:/Users/Sarah/CLionProjects/untitled2/cmake-build-debug/CMakeFiles/untitled2.dir
-C:/Users/Sarah/CLionProjects/untitled2/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Sarah/CLionProjects/untitled2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Sarah/Downloads/sprints/led-light-sequence-V1.0/cmake-build-debug/CMakeFiles/led_light_sequence_V1_0.dir
+C:/Users/Sarah/Downloads/sprints/led-light-sequence-V1.0/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Sarah/Downloads/sprints/led-light-sequence-V1.0/cmake-build-debug/CMakeFiles/rebuild_cache.dir

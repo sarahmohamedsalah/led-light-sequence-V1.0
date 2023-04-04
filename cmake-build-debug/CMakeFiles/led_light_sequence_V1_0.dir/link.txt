@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2023.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\led_light_sequence_V1_0.dir/objects.a
+C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\ar.exe qc CMakeFiles\led_light_sequence_V1_0.dir/objects.a @CMakeFiles\led_light_sequence_V1_0.dir\objects1
+C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\led_light_sequence_V1_0.dir/objects.a -Wl,--no-whole-archive -o led_light_sequence_V1_0.exe -Wl,--out-implib,libled_light_sequence_V1_0.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\led_light_sequence_V1_0.dir\linkLibs.rsp

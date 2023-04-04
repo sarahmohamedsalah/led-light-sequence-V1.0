@@ -1,4 +1,6 @@
 # ninja log v5
-2	376	7022616394355758	CMakeFiles/untitled2.dir/main.c.obj	de4ac5694a814697
-7	941	7022625524961616	CMakeFiles/untitled2.dir/main.c.obj	de4ac5694a814697
-5	264	7022626821141885	CMakeFiles/untitled2.dir/main.c.obj	de4ac5694a814697
+2	63	7022713357171857	CMakeFiles/led_light_sequence_V1_0.dir/main.c.obj	fad4711e123ecf8c
+2	67	7022714045465796	CMakeFiles/led_light_sequence_V1_0.dir/ECUAL/LED/led.c.obj	751b0f5faf0bd8ae
+2	72	7022714264906650	CMakeFiles/led_light_sequence_V1_0.dir/MCAL/DIO/DIO.c.obj	86aab84d6e43c382
+2	61	7022714386658331	CMakeFiles/led_light_sequence_V1_0.dir/ECUAL/BUTTON/button.c.obj	f6b9a7209a253625
+61	156	7022714387568369	led_light_sequence_V1_0.exe	57f653d74a51a930

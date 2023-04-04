@@ -1,6 +1,6 @@
 //#include <stdio.h>
-#include "cmake-build-debug/ECUAL/BUTTON/button.h"
-#include "cmake-build-debug/ECUAL/LED/led.h"
+#include "./ECUAL/BUTTON/button.h"
+#include "./ECUAL/LED/led.h"
 int main() {
     BTN0_Init();
     LED0_Init();

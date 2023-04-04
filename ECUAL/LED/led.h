@@ -2,8 +2,6 @@
 // Created by Sarah on 4/3/2023.
 //
 
-#ifndef UNTITLED2_LED_H
-#define UNTITLED2_LED_H
 #include "../../MCAL/DIO/DIO.h"
 
 void LED0_Init(void);
@@ -27,6 +25,3 @@ void LED3_ON(void);
 void LED3_OFF(void);
 void LED3_Toggle(void);
 
-
-
-#endif //UNTITLED2_LED_H

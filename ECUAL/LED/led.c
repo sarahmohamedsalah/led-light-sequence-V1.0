@@ -3,7 +3,7 @@
 //
 
 
-#include "LED.h"
+#include "led.h"
 
 
 void LED0_Init(void)
@@ -50,11 +50,6 @@ void LED1_Toggle(void)
     //TGL_BIT(PORTC, 2);
     DIO_TogglePin(DIO_PORTC, DIO_PIN2);
 }
-
-
-
-
-
 
 void LED2_Init(void)
 {
