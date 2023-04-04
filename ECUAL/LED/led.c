@@ -6,102 +6,335 @@
 #include "led.h"
 
 
-void LED0_Init(void)
+EN_ledError_t LED0_Init(uint8_t ledPort,uint8_t ledPin)
 {
 
-    //DDRC = 0x04;
+    EN_ledError_t error = LED_OK;
+    if (ledPort > PORTC)
+    {
+        error = WRONG_LED_PORT;
+    }
+    else if (ledPin > 7)
+    {
+        error = WRONG_LED_PIN;
+    }
+    else
+    {
 
     DIO_SetPin_Direction(DIO_PORTC, DIO_PIN2, DIO_PIN_OUTPUT);
+        error = LED_OK;
+    }
+
+    return error;
 }
-void LED0_ON(void)
+EN_ledError_t LED0_ON(uint8_t ledPort,uint8_t ledPin)
+
 {
-    //PORTC = 0x04;
-    DIO_SetPin_Value(DIO_PORTC, DIO_PIN2, DIO_PIN_HIGH);
+    EN_ledError_t error = LED_OK;
+    if (ledPort > PORTC)
+    {
+        error = WRONG_LED_PORT;
+    }
+    else if (ledPin > 7)
+    {
+        error = WRONG_LED_PIN;
+    }
+    else
+    {
+
+        DIO_SetPin_Value(DIO_PORTC, DIO_PIN2, DIO_PIN_HIGH);
+        error = LED_OK;
+    }
+
+    return error;
 }
-void LED0_OFF(void)
-{
-    //PORTC = 0x00;
+EN_ledError_t LED0_OFF(uint8_t ledPort,uint8_t ledPin)
+{EN_ledError_t error = LED_OK;
+    if (ledPort > PORTC)
+    {
+        error = WRONG_LED_PORT;
+    }
+    else if (ledPin > 7)
+    {
+        error = WRONG_LED_PIN;
+    }
+    else
+    {
     DIO_SetPin_Value(DIO_PORTC, DIO_PIN2, DIO_PIN_LOW);
+        error = LED_OK;
+    }
+
+    return error;
 }
-void LED0_Toggle(void)
+EN_ledError_t LED0_Toggle(uint8_t ledPort,uint8_t ledPin)
 {
-    //TGL_BIT(PORTC, 2);
-    DIO_TogglePin(DIO_PORTC, DIO_PIN2);
+    EN_ledError_t error = LED_OK;
+    if (ledPort > PORTC)
+    {
+        error = WRONG_LED_PORT;
+    }
+    else if (ledPin > 7)
+    {
+        error = WRONG_LED_PIN;
+    }
+    else
+    {
+        DIO_TogglePin(DIO_PORTC, DIO_PIN2);
+        error = LED_OK;
+    }
+
+    return error;
 }
 
-void LED1_Init(void)
-{
-
-    //DDRC = 0x04;
-    DIO_SetPin_Direction(DIO_PORTC, DIO_PIN2, DIO_PIN_OUTPUT);
-}
-void LED1_ON(void)
-{
-    //PORTC = 0x04;
-    DIO_SetPin_Value(DIO_PORTC, DIO_PIN2, DIO_PIN_HIGH);
-}
-void LED1_OFF(void)
-{
-    //PORTC = 0x00;
-    DIO_SetPin_Value(DIO_PORTC, DIO_PIN2, DIO_PIN_LOW);
-}
-void LED1_Toggle(void)
-{
-    //TGL_BIT(PORTC, 2);
-    DIO_TogglePin(DIO_PORTC, DIO_PIN2);
-}
-
-void LED2_Init(void)
+EN_ledError_t LED1_Init(uint8_t ledPort,uint8_t ledPin)
 {
 
-    //DDRC = 0x04;
-    DIO_SetPin_Direction(DIO_PORTC, DIO_PIN2, DIO_PIN_OUTPUT);
+    EN_ledError_t error = LED_OK;
+    if (ledPort > PORTC)
+    {
+        error = WRONG_LED_PORT;
+    }
+    else if (ledPin > 7)
+    {
+        error = WRONG_LED_PIN;
+    }
+    else
+    {
+
+        DIO_SetPin_Direction(DIO_PORTC, DIO_PIN2, DIO_PIN_OUTPUT);
+        error = LED_OK;
+    }
+
+    return error;
 }
-void LED2_ON(void)
+EN_ledError_t LED1_ON(uint8_t ledPort,uint8_t ledPin)
+
 {
-    //PORTC = 0x04;
-    DIO_SetPin_Value(DIO_PORTC, DIO_PIN2, DIO_PIN_HIGH);
+    EN_ledError_t error = LED_OK;
+    if (ledPort > PORTC)
+    {
+        error = WRONG_LED_PORT;
+    }
+    else if (ledPin > 7)
+    {
+        error = WRONG_LED_PIN;
+    }
+    else
+    {
+
+        DIO_SetPin_Value(DIO_PORTC, DIO_PIN2, DIO_PIN_HIGH);
+        error = LED_OK;
+    }
+
+    return error;
 }
-void LED2_OFF(void)
+EN_ledError_t LED1_OFF(uint8_t ledPort,uint8_t ledPin)
+{EN_ledError_t error = LED_OK;
+    if (ledPort > PORTC)
+    {
+        error = WRONG_LED_PORT;
+    }
+    else if (ledPin > 7)
+    {
+        error = WRONG_LED_PIN;
+    }
+    else
+    {
+        DIO_SetPin_Value(DIO_PORTC, DIO_PIN2, DIO_PIN_LOW);
+        error = LED_OK;
+    }
+
+    return error;
+}
+EN_ledError_t LED1_Toggle(uint8_t ledPort,uint8_t ledPin)
 {
-    //PORTC = 0x00;
-    DIO_SetPin_Value(DIO_PORTC, DIO_PIN2, DIO_PIN_LOW);
+    EN_ledError_t error = LED_OK;
+    if (ledPort > PORTC)
+    {
+        error = WRONG_LED_PORT;
+    }
+    else if (ledPin > 7)
+    {
+        error = WRONG_LED_PIN;
+    }
+    else
+    {
+        DIO_TogglePin(DIO_PORTC, DIO_PIN2);
+        error = LED_OK;
+    }
+
+    return error;
 }
-void LED2_Toggle(void)
+
+EN_ledError_t LED2_Init(uint8_t ledPort,uint8_t ledPin)
 {
-    //TGL_BIT(PORTC, 2);
-    DIO_TogglePin(DIO_PORTC, DIO_PIN2);
+
+    EN_ledError_t error = LED_OK;
+    if (ledPort > PORTC)
+    {
+        error = WRONG_LED_PORT;
+    }
+    else if (ledPin > 7)
+    {
+        error = WRONG_LED_PIN;
+    }
+    else
+    {
+
+        DIO_SetPin_Direction(DIO_PORTC, DIO_PIN2, DIO_PIN_OUTPUT);
+        error = LED_OK;
+    }
+
+    return error;
+}
+EN_ledError_t LED2_ON(uint8_t ledPort,uint8_t ledPin)
+
+{
+    EN_ledError_t error = LED_OK;
+    if (ledPort > PORTC)
+    {
+        error = WRONG_LED_PORT;
+    }
+    else if (ledPin > 7)
+    {
+        error = WRONG_LED_PIN;
+    }
+    else
+    {
+
+        DIO_SetPin_Value(DIO_PORTC, DIO_PIN2, DIO_PIN_HIGH);
+        error = LED_OK;
+    }
+
+    return error;
+}
+EN_ledError_t LED2_OFF(uint8_t ledPort,uint8_t ledPin)
+{EN_ledError_t error = LED_OK;
+    if (ledPort > PORTC)
+    {
+        error = WRONG_LED_PORT;
+    }
+    else if (ledPin > 7)
+    {
+        error = WRONG_LED_PIN;
+    }
+    else
+    {
+        DIO_SetPin_Value(DIO_PORTC, DIO_PIN2, DIO_PIN_LOW);
+        error = LED_OK;
+    }
+
+    return error;
+}
+EN_ledError_t LED2_Toggle(uint8_t ledPort,uint8_t ledPin)
+{
+    EN_ledError_t error = LED_OK;
+    if (ledPort > PORTC)
+    {
+        error = WRONG_LED_PORT;
+    }
+    else if (ledPin > 7)
+    {
+        error = WRONG_LED_PIN;
+    }
+    else
+    {
+        DIO_TogglePin(DIO_PORTC, DIO_PIN2);
+        error = LED_OK;
+    }
+
+    return error;
 }
 
-
-
-
-
-
-
-
-
-void LED3_Init(void)
+EN_ledError_t LED3_Init(uint8_t ledPort,uint8_t ledPin)
 {
 
-    //DDRC = 0x04;
-    DIO_SetPin_Direction(DIO_PORTC, DIO_PIN2, DIO_PIN_OUTPUT);
+    EN_ledError_t error = LED_OK;
+    if (ledPort > PORTC)
+    {
+        error = WRONG_LED_PORT;
+    }
+    else if (ledPin > 7)
+    {
+        error = WRONG_LED_PIN;
+    }
+    else
+    {
+
+        DIO_SetPin_Direction(DIO_PORTC, DIO_PIN2, DIO_PIN_OUTPUT);
+        error = LED_OK;
+    }
+
+    return error;
 }
-void LED3_ON(void)
+EN_ledError_t LED3_ON(uint8_t ledPort,uint8_t ledPin)
+
 {
-    //PORTC = 0x04;
-    DIO_SetPin_Value(DIO_PORTC, DIO_PIN2, DIO_PIN_HIGH);
+    EN_ledError_t error = LED_OK;
+    if (ledPort > PORTC)
+    {
+        error = WRONG_LED_PORT;
+    }
+    else if (ledPin > 7)
+    {
+        error = WRONG_LED_PIN;
+    }
+    else
+    {
+
+        DIO_SetPin_Value(DIO_PORTC, DIO_PIN2, DIO_PIN_HIGH);
+        error = LED_OK;
+    }
+
+    return error;
 }
-void LED3_OFF(void)
+EN_ledError_t LED3_OFF(uint8_t ledPort,uint8_t ledPin)
+{EN_ledError_t error = LED_OK;
+    if (ledPort > PORTC)
+    {
+        error = WRONG_LED_PORT;
+    }
+    else if (ledPin > 7)
+    {
+        error = WRONG_LED_PIN;
+    }
+    else
+    {
+        DIO_SetPin_Value(DIO_PORTC, DIO_PIN2, DIO_PIN_LOW);
+        error = LED_OK;
+    }
+
+    return error;
+}
+EN_ledError_t LED3_Toggle(uint8_t ledPort,uint8_t ledPin)
 {
-    //PORTC = 0x00;
-    DIO_SetPin_Value(DIO_PORTC, DIO_PIN2, DIO_PIN_LOW);
+    EN_ledError_t error = LED_OK;
+    if (ledPort > PORTC)
+    {
+        error = WRONG_LED_PORT;
+    }
+    else if (ledPin > 7)
+    {
+        error = WRONG_LED_PIN;
+    }
+    else
+    {
+        DIO_TogglePin(DIO_PORTC, DIO_PIN2);
+        error = LED_OK;
+    }
+
+    return error;
 }
-void LED3_Toggle(void)
-{
-    //TGL_BIT(PORTC, 2);
-    DIO_TogglePin(DIO_PORTC, DIO_PIN2);
-}
+
+
+
+
+
+
+
+
+
+
 
 
 

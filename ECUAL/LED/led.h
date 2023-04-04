@@ -3,25 +3,29 @@
 //
 
 #include "../../MCAL/DIO/DIO.h"
+typedef enum ledErrors{
+    LED_OK,
+    WRONG_LED_PORT,
+    WRONG_LED_PIN
+}EN_ledError_t;
+EN_ledError_t LED0_Init(uint8_t ledPort,uint8_t ledPin);
+EN_ledError_t LED0_ON(uint8_t ledPort,uint8_t ledPin);
+EN_ledError_t LED0_OFF(uint8_t ledPort,uint8_t ledPin);
+EN_ledError_t LED0_Toggle(uint8_t ledPort,uint8_t ledPin);
 
-void LED0_Init(void);
-void LED0_ON(void);
-void LED0_OFF(void);
-void LED0_Toggle(void);
 
+EN_ledError_t LED1_Init(uint8_t ledPort,uint8_t ledPin);
+EN_ledError_t LED1_ON(uint8_t ledPort,uint8_t ledPin);
+EN_ledError_t LED1_OFF(uint8_t ledPort,uint8_t ledPin);
+EN_ledError_t LED1_Toggle(uint8_t ledPort,uint8_t ledPin);
 
-void LED1_Init(void);
-void LED1_ON(void);
-void LED1_OFF(void);
-void LED1_Toggle(void);
+EN_ledError_t LED2_Init(uint8_t ledPort,uint8_t ledPin);
+EN_ledError_t LED2_ON(uint8_t ledPort,uint8_t ledPin);
+EN_ledError_t LED2_OFF(uint8_t ledPort,uint8_t ledPin);
+EN_ledError_t LED2_Toggle(uint8_t ledPort,uint8_t ledPin);
 
-void LED2_Init(void);
-void LED2_ON(void);
-void LED2_OFF(void);
-void LED2_Toggle(void);
-
-void LED3_Init(void);
-void LED3_ON(void);
-void LED3_OFF(void);
-void LED3_Toggle(void);
+EN_ledError_t LED3_Init(uint8_t ledPort,uint8_t ledPin);
+EN_ledError_t LED3_ON(uint8_t ledPort,uint8_t ledPin);
+EN_ledError_t LED3_OFF(uint8_t ledPort,uint8_t ledPin);
+EN_ledError_t LED3_Toggle(uint8_t ledPort,uint8_t ledPin);
 
